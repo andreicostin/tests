@@ -247,7 +247,7 @@ class FeatureContext extends Behat\MinkExtension\Context\MinkContext
         $goToSaveForLater->click();
         $this->getSession()->wait(5000);
         $saveForLaterCount = $page->find('xpath','//span[@id="ctl00_ContentMainPage_ItemCount"]');
-        if($saveForLaterCount->getText() !== '0') {
+        if($saveForLaterCount->getText() !== '1') {
             throw new Exception("The item was not saved for later");
         }
     }
